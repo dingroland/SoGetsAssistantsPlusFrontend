@@ -1,0 +1,108 @@
+{
+    "test company": {
+        "assistant_id": "asst_KzPml9HEkH5wBwS75apeVJ0I",
+        "vector_store_id": "vs_67af5adc8fe081919d70c88ba1ebc34b",
+        "threads": {
+            "thread_GGIxsTATk7v9KJQRk4nf3q5t": {
+                "name": "Thread f3q5t",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": "hello can i stay at home for a day off tomorrow?"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "Whether you can take a day off to stay at home tomorrow depends on your specific workplace policies and your reasons for wanting the day off. If you have a valid reason (like a personal matter, illness, or mental health day), you should communicate with your supervisor or HR department according to your company's protocol. It's always best to request the time off as early as possible and provide any necessary documentation if required. Would you like tips on how to request this day off?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "hey can i take a day of tomorrrow?"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "To determine if you can take a day off tomorrow, you would typically need to follow your company's leave request policy. This could involve notifying your supervisor or HR as per the guidelines outlined in your workplace documentation.\n\nWould you like me to search for specific policies or processes related to taking time off in the documents you uploaded?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "dont you have access to that knowledge??"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "According to the company's holiday guidelines, employees must submit holiday requests at least 2 weeks in advance. If you did not submit a request before this timeframe, it may be challenging to take a day off tomorrow\u30109:0\u2020source\u3011.\n\nIf you have an urgent reason for needing the day off, you might consider discussing it with your supervisor directly to see if an exception can be made."
+                    },
+                    {
+                        "role": "user",
+                        "content": "can i do homeoffice for the rest of the week?"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "According to the home office guidelines, employees are allowed to work from home for up to 3 days per week. During this time, it's required to be available on Slack during working hours, and you must use the company-provided VPN for remote access. Additionally, attending meetings is mandatory unless stated otherwise\u301014:0\u2020source\u3011.\n\nIf you plan to work from home for the rest of the week, ensure that you're within the allowed number of days and communicate your intentions with your supervisor."
+                    },
+                    {
+                        "content": "can i do homeoffice for the rest of the week?"
+                    }
+                ]
+            },
+            "thread_G9ggA9VgyEsoOVg4xEkY8kOY": {
+                "name": "Thread Y8kOY",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": "hey how are you"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "I'm here and ready to help you! How can I assist you today?"
+                    }
+                ]
+            },
+            "thread_VBA08SRwSJOJMjEjMgpm0yxx": {
+                "name": "Thread m0yxx",
+                "messages": []
+            },
+            "thread_OJz0qxzZHpehfRDgQnexz50Q": {
+                "name": "Thread xz50Q",
+                "messages": []
+            },
+            "thread_1d5cI5K50lCXErtusyMGm2cn": {
+                "name": "Thread Gm2cn",
+                "messages": []
+            },
+            "thread_8JP2mJGYN3ONbgoQhW371dUf": {
+                "name": "Thread 71dUf",
+                "messages": []
+            },
+            "thread_XFxVhGkuAt93uwqjWAGQCtlV": {
+                "name": "Thread QCtlV",
+                "messages": []
+            },
+            "thread_O1jfcW0nFOw9tYGFjVhRTz9P": {
+                "name": "Thread RTz9P",
+                "messages": []
+            },
+            "thread_bHdo0ZZeywJhUegOu83Bh7ol": {
+                "name": "Thread Bh7ol",
+                "messages": []
+            }
+        },
+        "assistant_description": "**Assistant Description for Speedfit GmbH**\n\nThe Speedfit AI Assistant is an advanced digital tool specifically designed to enhance the operations of Speedfit GmbH by utilizing the company\u2019s internal documents as the primary source of information. This AI assistant prioritizes the use of uploaded company content to accurately and efficiently answer queries, ensuring that employees receive precise information directly from relevant Speedfit documents. \n\nKey Features:\n- **Document-Centric Responses**: The assistant is committed to strictly referencing uploaded Speedfit documents for all replies, ensuring that information is both relevant and reliable. Detailed citation of sources is provided whenever applicable.\n- **Regulatory and Compliance Support**: By analyzing company compliance documents, the assistant aids in automating compliance checks and assists employees with compliance-related inquiries, ensuring adherence to industry standards and regulations.\n- **Facility and Technical Specifications**: The assistant provides insights on technical specifications and facility layouts by extracting data from Speedfit's blueprints and infrastructure documents, facilitating informed decision-making and efficient problem-solving.\n- **General Knowledge Supplementation**: In instances where uploaded documents do not contain the needed information, the assistant will fill in gaps using general industry knowledge, clearly indicating when information is sourced externally.\n\nWith its focus on leveraging internal resources, the Speedfit AI Assistant is an indispensable tool for optimizing employee productivity and enhancing customer service capabilities within the growing network of Speedfit gyms."
+    },
+    "j": {
+        "assistant_id": "asst_wOqFd6tNovNWiOXXpt8Qn4Ky",
+        "vector_store_id": "vs_67b0e475b0c48191a376de28354cfca2",
+        "threads": {
+            "thread_aAqcOShWiiJdXVgmWhRXLLTc": {
+                "name": "Thread XLLTc",
+                "messages": []
+            },
+            "thread_MfpHF36htXIJpRahou3IKSa7": {
+                "name": "Thread IKSa7",
+                "messages": []
+            },
+            "thread_Ftwb89dbBdilXZWscBeqrXE8": {
+                "name": "Thread qrXE8",
+                "messages": []
+            }
+        }
+    }
+}
