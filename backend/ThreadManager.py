@@ -93,54 +93,34 @@ class ThreadManager(BaseOpenAIManager):
 
 
 
-    def stream_assistant_response_gui(self, thread_id: str, assistant_id: str, chat_display):
-        """Simulates streaming by retrieving the response and displaying it in the GUI chat window."""
-        try:
-            # Run the assistant and wait for completion
-            run_response = self.client.beta.threads.runs.create_and_poll(
-                thread_id=thread_id,
-                assistant_id=assistant_id
-            )
-
-            # Retrieve the completed messages
-            messages = self.client.beta.threads.messages.list(thread_id=thread_id, run_id=run_response.id)
-
-            # Get the assistant's last message
-            assistant_message = next((msg for msg in messages.data if msg.role == "assistant"), None)
-
-            if assistant_message:
-                response_text = assistant_message.content[0].text.value
-                chat_display.append("🤖 Assistant: ")  # Initial placeholder
-
-                for line in response_text.split(". "):  # Split by sentence for smooth printing
-                    line = line.strip() + "."
-                    print(line, flush=True)  # Still prints in terminal
-                    chat_display.append(line)  # Show line in GUI
-                    chat_display.ensureCursorVisible()
-                    QApplication.processEvents()
-                    time.sleep(0.2)  # Simulate streaming delay
-
-            else:
-                chat_display.append("🤖 Assistant: Error: No response found.")
-        
-        except Exception as e:
-            chat_display.append(f"🤖 Assistant: Error: {str(e)}")
-
-
 
     def get_assistant_response(self, thread_id: str, assistant_id: str) -> str:
-        """Retrieves the latest assistant message from a thread."""
+        """Retrieves the latest assistant message from a thread using v2 API."""
         try:
-            # Poll the assistant for a response
-            run_response = self.client.beta.threads.runs.create_and_poll(
+            # Create a new run
+            run_response = self.client.beta.threads.runs.create(
                 thread_id=thread_id,
                 assistant_id=assistant_id
             )
+            run_id = run_response.id
 
-            # Retrieve the messages from the thread
-            messages = self.client.beta.threads.messages.list(thread_id=thread_id, run_id=run_response.id)
+            # Poll for completion
+            while True:
+                run_status = self.client.beta.threads.runs.retrieve(
+                    thread_id=thread_id,
+                    run_id=run_id
+                )
+                print(f"🟡 Assistant Run Status: {run_status.status}")  # Debugging output
 
-            # Get the latest assistant message
+                if run_status.status == "completed":
+                    break
+                elif run_status.status in ["failed", "cancelled"]:
+                    return f"⚠ Error: Assistant run failed with status {run_status.status}"
+                
+                time.sleep(0.5)
+
+            # Retrieve the messages
+            messages = self.client.beta.threads.messages.list(thread_id=thread_id)
             assistant_message = next((msg for msg in messages.data if msg.role == "assistant"), None)
 
             if assistant_message:
@@ -150,3 +130,5 @@ class ThreadManager(BaseOpenAIManager):
         
         except Exception as e:
             return f"⚠ Error retrieving response: {str(e)}"
+
+

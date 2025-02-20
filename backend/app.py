@@ -6,6 +6,8 @@ import os
 app = FastAPI()
 STATE_FILE = os.path.join(os.path.dirname(__file__), "state.json")
 
+api_key = os.getenv("OPENAI_API_KEY")
+
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
@@ -67,25 +69,42 @@ async def get_threads(company_id: str):
 
 
 
+#TODO REFACTOR IMPORTS
+
+from ThreadManager import ThreadManager
+
+thread_manager = ThreadManager(api_key)  # Initialize the ThreadManager
+
 @app.post("/api/company/{company_id}/threads/{thread_id}/message")
 async def post_message(company_id: str, thread_id: str, message: dict = Body(...)):
     state = load_state()
     
     if company_id not in state:
-        print(f"❌ Company {company_id} not found")
         raise HTTPException(status_code=404, detail="Company not found")
     
     if "threads" not in state[company_id]:
-        print(f"❌ No threads found for {company_id}")
         raise HTTPException(status_code=404, detail="No threads found")
 
     if thread_id not in state[company_id]["threads"]:
-        print(f"❌ Thread {thread_id} not found for {company_id}")
         raise HTTPException(status_code=404, detail="Thread not found")
 
+    # Store the user message
     state[company_id]["threads"][thread_id]["messages"].append(message)
     save_state(state)
+
     print(f"✅ Message added to {thread_id} in {company_id}")
-    
-    return {"status": "Message added"}
+
+    # Get assistant response
+    assistant_id = "your_assistant_id_here"  # Replace with actual assistant ID
+    assistant_response = thread_manager.get_assistant_response(thread_id, assistant_id)
+
+    # Store assistant response
+    state[company_id]["threads"][thread_id]["messages"].append({
+        "role": "assistant",
+        "content": assistant_response
+    })
+    save_state(state)
+
+    return {"status": "Message added", "assistantResponse": assistant_response}
+
 

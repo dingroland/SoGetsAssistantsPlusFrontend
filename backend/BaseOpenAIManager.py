@@ -7,7 +7,8 @@ class BaseOpenAIManager:
     """
     def __init__(self, api_key: str):
         """Initialize OpenAI API client."""
-        self.client = openai.OpenAI(api_key=api_key)
+        self.client = openai.OpenAI(api_key=api_key,
+                                    default_headers={"OpenAI-Beta": "assistants=v2"})
     
     def handle_api_call(self, function, *args, **kwargs):
         """Wrapper for API calls to handle errors cleanly."""

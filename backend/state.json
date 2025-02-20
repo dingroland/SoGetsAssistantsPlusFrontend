@@ -40,6 +40,78 @@
                     },
                     {
                         "content": "can i do homeoffice for the rest of the week?"
+                    },
+                    {
+                        "content": "can i do homeoffice for the rest of the week?"
+                    },
+                    {
+                        "content": "can i do homeoffice for the rest of the week?"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "\u26a0 Error retrieving response: 'Runs' object has no attribute 'create_and_poll'"
+                    },
+                    {
+                        "content": "can i do homeoffice for the rest of the week?"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "\u26a0 Error retrieving response: 'Runs' object has no attribute 'create_and_poll'"
+                    },
+                    {
+                        "content": "can i do homeoffice for the rest of the week?"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "\u26a0 Error retrieving response: 'Runs' object has no attribute 'create_and_poll'"
+                    },
+                    {
+                        "content": "can i do homeoffice for the rest of the week?"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "\u26a0 Error retrieving response: 'Runs' object has no attribute 'create_and_poll'"
+                    },
+                    {
+                        "content": "can i do homeoffice for the rest of the week?"
+                    },
+                    {
+                        "content": "can i do homeoffice for the rest of the week?"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "\u26a0 Error retrieving response: Error code: 400 - {'error': {'message': \"The v1 Assistants API has been deprecated. Please try again by setting the header 'OpenAI-Beta: assistants=v2'. See the migration guide for more information: https://platform.openai.com/docs/assistants/migration.\", 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_beta'}}"
+                    },
+                    {
+                        "content": "can i do homeoffice for the rest of the week?"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "\u26a0 Error retrieving response: Error code: 400 - {'error': {'message': \"The v1 Assistants API has been deprecated. Please try again by setting the header 'OpenAI-Beta: assistants=v2'. See the migration guide for more information: https://platform.openai.com/docs/assistants/migration.\", 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_beta'}}"
+                    },
+                    {
+                        "content": "can i do homeoffice for the rest of the week?"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "\u26a0 Error retrieving response: Error code: 400 - {'error': {'message': \"The v1 Assistants API has been deprecated. Please try again by setting the header 'OpenAI-Beta: assistants=v2'. See the migration guide for more information: https://platform.openai.com/docs/assistants/migration.\", 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_beta'}}"
+                    },
+                    {
+                        "content": "can i do homeoffice for the rest of the week?"
+                    },
+                    {
+                        "content": "can i do homeoffice for the rest of the week?"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "\u26a0 Error retrieving response: Error code: 400 - {'error': {'message': \"The v1 Assistants API has been deprecated. Please try again by setting the header 'OpenAI-Beta: assistants=v2'. See the migration guide for more information: https://platform.openai.com/docs/assistants/migration.\", 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_beta'}}"
+                    },
+                    {
+                        "content": "hey can i take a day of tomorrrow?"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "\u26a0 Error retrieving response: Error code: 400 - {'error': {'message': \"The v1 Assistants API has been deprecated. Please try again by setting the header 'OpenAI-Beta: assistants=v2'. See the migration guide for more information: https://platform.openai.com/docs/assistants/migration.\", 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_beta'}}"
                     }
                 ]
             },
