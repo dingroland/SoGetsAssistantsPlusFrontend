@@ -97,14 +97,14 @@ class ThreadManager(BaseOpenAIManager):
     def get_assistant_response(self, thread_id: str, assistant_id: str) -> str:
         """Retrieves the latest assistant message from a thread using v2 API."""
         try:
-            # Create a new run
+            # ✅ Create a new run
             run_response = self.client.beta.threads.runs.create(
                 thread_id=thread_id,
                 assistant_id=assistant_id
             )
             run_id = run_response.id
 
-            # Poll for completion
+            # ✅ Poll for completion
             while True:
                 run_status = self.client.beta.threads.runs.retrieve(
                     thread_id=thread_id,
@@ -119,7 +119,7 @@ class ThreadManager(BaseOpenAIManager):
                 
                 time.sleep(0.5)
 
-            # Retrieve the messages
+            # ✅ Retrieve the messages correctly
             messages = self.client.beta.threads.messages.list(thread_id=thread_id)
             assistant_message = next((msg for msg in messages.data if msg.role == "assistant"), None)
 
@@ -130,5 +130,3 @@ class ThreadManager(BaseOpenAIManager):
         
         except Exception as e:
             return f"⚠ Error retrieving response: {str(e)}"
-
-
